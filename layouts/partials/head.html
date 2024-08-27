@@ -3,6 +3,7 @@
 {{ hugo.Generator }}
 <!-- New line -->
 <script src="https://kit.fontawesome.com/f05bb84533.js" crossorigin="anonymous"></script>
+
 {{ if eq .RelPermalink "/" }}
 <title>{{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Site.Title }}">
@@ -33,6 +34,10 @@
 {{ partial "head_highlightjs" . }}
 <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
 <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" media="all">
+
+<!-- Newline -->
+<link rel="stylesheet" href="{{ "css/main-overrides.css" | relURL }}" media="all">
+
 {{ range .Site.Params.customCSS }}
 <link rel="stylesheet" href="{{ . | relURL }}">
 {{ end }}

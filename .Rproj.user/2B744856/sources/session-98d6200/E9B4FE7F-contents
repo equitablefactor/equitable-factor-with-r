@@ -1,15 +1,18 @@
       <footer class="footer">
+        <hr/>
         <ul class="footer-links">
-          {{ with .OutputFormats.Get "RSS" }}
+          <!-- TODO: Move the "RSS", "Terms", etc. links to the right of the footer section -->
+          <!-- {{ with .OutputFormats.Get "RSS" }}
           <li>
             <a href="{{ .RelPermalink }}" type="application/rss+xml" target="_blank">RSS feed</a>
           </li>
           {{ end }}
           <li>
             <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="{{ "images/hugo-logo.png" | relURL }}" alt="Img link to Hugo website" width="22" height="22"></a>
-          </li>
-          {{ range $item := .Site.Params.socialIcons }}
+          </li> -->
+          <li><p>{{ replace .Site.Params.footer.branding "{Year}" now.Year | markdownify }}</p></li>
           <li>
+          {{ range $item := .Site.Params.socialIcons }}
             <a
               href="{{ $item.url }}"
               target="_blank"
@@ -17,10 +20,10 @@
               aria-label="{{ $item.title }}"
               title="{{ $item.title }}"
             >
-              <i class="{{ $item.icon }} fa-2x" aria-hidden="true"></i>
+              <i class="{{ $item.icon }} fa-lg" aria-hidden="true"></i>
             </a>
-          </li>
           {{ end }}
+          </li>
         </ul>
       </footer>
 

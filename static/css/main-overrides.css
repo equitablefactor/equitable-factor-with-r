@@ -1,0 +1,21 @@
+.footer-links,
+.footer-links a {
+  color: #222;
+}
+
+.footer-links a {
+  margin: 0 5px;
+}
+
+.footer-links li:first-child {
+  margin: 0 15px 0 0;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #6086b4;
+}
+
+.footer-links li::before {
+  content: '';
+}
