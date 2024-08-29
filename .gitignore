@@ -7,3 +7,11 @@ Thumbs.db
 /public/
 
 /resources/
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/themes/exampleSite/.hugo_build.lock
+/the,esexampleSite/public

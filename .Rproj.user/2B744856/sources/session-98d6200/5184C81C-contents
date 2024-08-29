@@ -37,7 +37,7 @@ params:
   logo:
     alt: Logo
     height: 50
-    url: logo.png
+    url: equitable_factor_logo_black.png
     width: 50
   footer: 
     branding: "&copy; Equitable Factor -- {Year}"
